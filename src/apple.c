@@ -15,10 +15,9 @@ int main(){
   for (i = 0; i < n; i++) {
     scanf("%d", &A[i]);
   }
-  lb = 1;
+  lb = 0;
   ub = A[n - 1];
-  if (ltk(1) < k) lb = ub = 1;
-  else while (ub - lb > 1) {
+  while (ub - lb > 1) {
     int m = (lb + ub) / 2;
     if (ltk(m) <= k) ub = m;
     else lb = m;
