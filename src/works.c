@@ -8,6 +8,7 @@ int ge(int m);
 int sum();
 int max();
 
+
 int main(){
   int i, lb, ub;
   scanf("%d%d", &n, &k);
@@ -20,7 +21,6 @@ int main(){
     int m = (lb + ub) / 2;
     if (ge(m) <= k) ub = m;
     else lb = m;
-    printf("%d, %d\n", lb, ub);
   }
   printf("%d", ub);
   return 0;

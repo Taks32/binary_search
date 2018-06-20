@@ -19,7 +19,6 @@ int main(){
     int m = (ub + lb) / 2;
     if(ge(m) < k) ub = m;
     else lb = m;
-    printf("%d, %d\n", ub, lb);
   }
   printf("%d", lb);
   return 0;

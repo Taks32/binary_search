@@ -31,6 +31,7 @@ int ltk(int num) {
   for (i = 0; i < n; i++) {
     res += A[i] / num;
     if (A[i] % num != 0) res++;
+    if (res > k) break;
   }
   return res;
 }
