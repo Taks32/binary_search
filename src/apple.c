@@ -4,7 +4,6 @@ int n;
 int k;
 int A[100000];
 
-int rec(int n, int m);
 int ltk(int num);
 
 
