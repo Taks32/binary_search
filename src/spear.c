@@ -5,6 +5,7 @@ int k;
 int A[100000];
 
 int ge(int m);
+int sum();
 
 
 int main(){
@@ -14,7 +15,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = A[n - 1];
+  ub = sum();
   while (ub - lb > 1) {
     int m = (ub + lb) / 2;
     if(ge(m) < k) ub = m;
@@ -22,6 +23,13 @@ int main(){
   }
   printf("%d", lb);
   return 0;
+}
+
+int sum() {
+  int i, res;
+  res = 0;
+  for(i = 0; i < n; i++) res += A[i];
+  return res;
 }
 
 int ge(int m) {

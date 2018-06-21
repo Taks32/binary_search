@@ -5,6 +5,7 @@ int k;
 int A[100000];
 
 int ltk(int num);
+int max();
 
 
 int main(){
@@ -15,7 +16,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = A[n - 1];
+  ub = max();
   while (ub - lb > 1) {
     int m = (lb + ub) / 2;
     if (ltk(m) <= k) ub = m;
@@ -32,6 +33,15 @@ int ltk(int num) {
     res += A[i] / num;
     if (A[i] % num != 0) res++;
     if (res > k) break;
+  }
+  return res;
+}
+
+int max() {
+  int i, res;
+  res = A[0];
+  for (i = 1; i < n; i++) {
+    if(res < A[i]) res = A[i];
   }
   return res;
 }
