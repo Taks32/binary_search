@@ -15,7 +15,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = max + 1;
+  ub = max() + 1;
   while (ub - lb > 1) {
     int m = (ub + lb) / 2;
     if(ge(m) < k) ub = m;
